@@ -18,17 +18,12 @@ const ContactForm = () => {
   }
 
   return (
-    <section
-      id="contact"
-      className="bg-gray-900 py-12 text-white px-6 md:px-10"
-    >
+    <section id="contact" className="bg-gray-50 py-12 text-black px-6 md:px-10">
       <div className="max-w-5xl mx-auto w-full flex flex-col lg:flex-row items-start">
         {/* Left Section - Heading */}
         <div className="flex-1 mb-8 lg:mb-0 lg:w-1/3">
-          <h2 className="text-3xl font-extrabold text-blue-400">
-            Get in Touch
-          </h2>
-          <p className="mt-2 text-lg text-gray-300">
+          <h2 className="text-3xl font-extrabold text-black">Get in Touch</h2>
+          <p className="mt-2 text-lg text-gray-600">
             Feel free to reach out for any inquiries or collaborations.
           </p>
         </div>
@@ -40,7 +35,7 @@ const ContactForm = () => {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-semibold text-gray-300"
+                className="block text-sm font-semibold text-gray-700"
               >
                 Name
               </label>
@@ -49,7 +44,7 @@ const ContactForm = () => {
                 name="name"
                 id="name"
                 placeholder="Your Name"
-                className="w-full p-3 mt-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 mt-2 bg-white border border-gray-300 text-black rounded-md focus:ring-2 focus:ring-black focus:border-black"
               />
             </div>
 
@@ -57,7 +52,7 @@ const ContactForm = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-semibold text-gray-300"
+                className="block text-sm font-semibold text-gray-700"
               >
                 Email
               </label>
@@ -66,7 +61,7 @@ const ContactForm = () => {
                 name="email"
                 id="email"
                 placeholder="Your Email"
-                className="w-full p-3 mt-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 mt-2 bg-white border border-gray-300 text-black rounded-md focus:ring-2 focus:ring-black focus:border-black"
               />
               <ValidationError
                 prefix="Email"
@@ -79,7 +74,7 @@ const ContactForm = () => {
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-semibold text-gray-300"
+                className="block text-sm font-semibold text-gray-700"
               >
                 Message
               </label>
@@ -87,7 +82,7 @@ const ContactForm = () => {
                 name="message"
                 id="message"
                 placeholder="Your Message"
-                className="w-full p-3 mt-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 mt-2 bg-white border border-gray-300 text-black rounded-md focus:ring-2 focus:ring-black focus:border-black"
                 rows="4"
               ></textarea>
               <ValidationError
@@ -102,7 +97,7 @@ const ContactForm = () => {
               <button
                 type="submit"
                 disabled={state.submitting}
-                className="w-full py-3 mt-6 text-lg font-semibold text-white rounded-md bg-blue-600 hover:bg-blue-500 focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+                className="w-full py-3 mt-6 text-lg font-semibold text-white rounded-md bg-black hover:bg-gray-800 focus:ring-2 focus:ring-gray-500 transition-all duration-300"
               >
                 {state.submitting ? "Sending..." : "Send Message"}
               </button>

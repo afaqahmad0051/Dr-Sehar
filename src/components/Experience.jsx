@@ -1,4 +1,9 @@
-import { FaRocket, FaCode, FaRegLightbulb, FaGraduationCap } from "react-icons/fa";
+import {
+  FaRocket,
+  FaCode,
+  FaRegLightbulb,
+  FaGraduationCap,
+} from "react-icons/fa";
 
 const experiences = [
   {
@@ -14,7 +19,7 @@ const experiences = [
       "Implemented CI/CD pipelines and automated deployments.",
       "Managed server infrastructure and cloud-based hosting.",
     ],
-    gradient: "from-purple-600 to-purple-400",
+    gradient: "from-gray-800 to-gray-600",
   },
   {
     icon: <FaCode size={32} />,
@@ -29,7 +34,7 @@ const experiences = [
       "Built and maintained RESTful APIs with Laravel.",
       "Ensured cross-platform compatibility and performance.",
     ],
-    gradient: "from-red-600 to-red-400",
+    gradient: "from-gray-700 to-gray-500",
   },
   {
     icon: <FaRegLightbulb size={32} />,
@@ -44,7 +49,7 @@ const experiences = [
       "Integrated accounting APIs for automation.",
       "Optimized database queries to improve processing speed.",
     ],
-    gradient: "from-green-600 to-green-400",
+    gradient: "from-gray-600 to-gray-400",
   },
   {
     icon: <FaGraduationCap size={32} />,
@@ -59,7 +64,7 @@ const experiences = [
       "Built small-scale CRUD applications for internal use.",
       "Developed accounting and school management software.",
     ],
-    gradient: "from-blue-600 to-blue-400",
+    gradient: "from-black to-gray-800",
   },
 ];
 
@@ -67,13 +72,13 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="bg-gray-900 py-12 text-white px-6 md:px-10"
+      className="bg-white py-12 text-black px-6 md:px-10"
     >
       <div className="max-w-7xl mx-auto w-full">
         {/* Left Section - Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-blue-400">Experience</h2>
-          <p className="mt-2 text-lg text-gray-300">
+          <h2 className="text-4xl font-extrabold text-black">Experience</h2>
+          <p className="mt-2 text-lg text-gray-600">
             Take a look at the milestones in my professional journey.
           </p>
         </div>
@@ -91,17 +96,17 @@ const Experience = () => {
                 >
                   {experience.icon}
                 </div>
-                <h3 className="text-2xl font-semibold text-white">
+                <h3 className="text-2xl font-semibold text-black">
                   {experience.title}
                 </h3>
-                <p className="mt-2 text-sm text-gray-200">
+                <p className="mt-2 text-sm text-gray-700">
                   {experience.company} - {experience.duration}
                 </p>
               </div>
 
               <div className="w-full lg:w-2/3">
-                <p className="text-gray-300">{experience.description}</p>
-                <ul className="mt-4 text-gray-200 list-disc pl-5">
+                <p className="text-gray-700">{experience.description}</p>
+                <ul className="mt-4 text-gray-600 list-disc pl-5">
                   {experience.tasks.map((task, taskIndex) => (
                     <li key={taskIndex}>{task}</li>
                   ))}
