@@ -66,18 +66,6 @@ const Navbar = () => {
             ))}
           </div>
         </nav>
-
-        {/* Mobile Navigation Button */}
-        <div className="lg:hidden">
-          <button
-            type="button"
-            className="bg-white/90 backdrop-blur-md border border-gray-200/50 rounded-full p-3 shadow-lg text-black focus:outline-none"
-            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <FaBars className="text-lg" />
-          </button>
-        </div>
       </header>
 
       {/* Brand/Logo - Plain text without border */}
@@ -90,12 +78,24 @@ const Navbar = () => {
         </a>
       </div>
 
-      {/* Resume Button - Positioned in Right Corner */}
-      <div className="fixed top-4 right-4 z-40">
+      {/* Mobile Navigation Button - Positioned in Right Corner */}
+      <div className="fixed top-4 right-4 z-50 lg:hidden">
+        <button
+          type="button"
+          className="bg-white/90 backdrop-blur-md border border-gray-200/50 rounded-full p-3 shadow-lg text-black focus:outline-none"
+          onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <span className="sr-only">Open main menu</span>
+          <FaBars className="text-lg" />
+        </button>
+      </div>
+
+      {/* Resume Button - Positioned in Right Corner (Desktop Only) */}
+      <div className="fixed top-4 right-4 z-40 hidden lg:block">
         <a
           href="/sehar-basheer-cv.pdf"
           download="sehar-basheer-cv.pdf"
-          className="hidden lg:flex items-center gap-2 px-4 py-2 bg-black text-white text-sm font-medium rounded-full shadow-md hover:bg-gray-800 transition-all duration-300"
+          className="flex items-center gap-2 px-4 py-2 bg-black text-white text-sm font-medium rounded-full shadow-md hover:bg-gray-800 transition-all duration-300"
         >
           Resume <FaDownload className="text-xs" />
         </a>
