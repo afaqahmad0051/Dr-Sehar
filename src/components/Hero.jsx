@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="relative animate-fadeIn bg-gradient-to-br from-gray-50 via-white to-gray-100 w-full h-screen text-black flex items-center justify-center"
+      className="relative animate-fadeIn bg-gradient-to-br from-gray-50 via-white to-gray-100 w-full h-screen text-black flex items-center justify-center pt-20"
     >
       <div className="absolute inset-0 bg-opacity-10 bg-black mix-blend-overlay"></div>
       <div className="z-10 max-w-4xl text-center px-8">
