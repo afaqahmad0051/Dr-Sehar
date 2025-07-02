@@ -16,7 +16,7 @@ const Navbar = () => {
       // Change navbar background based on scroll position
       if (window.scrollY >= navbarHeight) {
         setNavbarBg(
-          "bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-md"
+          "bg-gradient-to-r from-white via-gray-50 to-white shadow-md border-b border-gray-200"
         );
       } else {
         setNavbarBg("transparent");
@@ -58,14 +58,14 @@ const Navbar = () => {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="text-2xl font-bold text-[#4a90e2]">
+          <a href="#" className="text-2xl font-bold text-black">
             AFAQ DEV
           </a>
         </div>
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="text-white focus:outline-none"
+            className="text-black focus:outline-none"
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
           >
             <span className="sr-only">Open main menu</span>
@@ -84,10 +84,10 @@ const Navbar = () => {
             <a
               href={`/#${link.toLowerCase()}`}
               key={link}
-              className={`text-md font-semibold hover:text-[#4a90e2] transition-colors duration-300 ease-in-out ${
+              className={`text-md font-semibold hover:text-black transition-colors duration-300 ease-in-out ${
                 activeSection === link.toLowerCase()
-                  ? "text-[#4a90e2]"
-                  : "text-gray-300"
+                  ? "text-black border-b-2 border-black"
+                  : "text-gray-600"
               }`}
             >
               {link}
@@ -98,7 +98,7 @@ const Navbar = () => {
           <a
             href="/afaq-cv.pdf"
             download="afaq-cv.pdf"
-            className="flex items-center gap-2 px-6 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg shadow-md hover:bg-blue-500 transition-all duration-300"
+            className="flex items-center gap-2 px-6 py-2 bg-black text-white text-sm font-medium rounded-lg shadow-md hover:bg-gray-800 transition-all duration-300"
           >
             Resume <FaDownload />
           </a>
@@ -107,7 +107,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-gray-900 p-6 transform ${
+        className={`fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-white border-l border-gray-200 p-6 transform ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300`}
       >
@@ -119,7 +119,7 @@ const Navbar = () => {
               </a>
               <button
                 type="button"
-                className="text-gray-300 focus:outline-none ml-auto"
+                className="text-gray-600 focus:outline-none ml-auto"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
@@ -151,7 +151,7 @@ const Navbar = () => {
                 <a
                   href={`/#${link.toLowerCase()}`}
                   key={link}
-                  className="block text-lg font-medium text-gray-300 hover:text-[#4a90e2] py-2"
+                  className="block text-lg font-medium text-gray-600 hover:text-black py-2"
                 >
                   {link}
                 </a>
@@ -160,7 +160,7 @@ const Navbar = () => {
                 <a
                   href="/afaq-cv"
                   download="afaq-cv.pdf"
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-lg shadow-md hover:bg-blue-500 transition-all duration-300"
+                  className="flex items-center justify-center gap-2 px-6 py-3 bg-black text-white text-sm font-medium rounded-lg shadow-md hover:bg-gray-800 transition-all duration-300"
                 >
                   Resume <FaDownload />
                 </a>

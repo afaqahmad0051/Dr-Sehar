@@ -38,13 +38,13 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white"
+      className="py-16 bg-gradient-to-r from-white via-gray-50 to-gray-100 text-black"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-blue-400">My Projects</h2>
-          <p className="mt-4 text-lg text-gray-300">
-            A collection of web and mobile applications I've built to solve
+          <h2 className="text-4xl font-extrabold text-black">My Projects</h2>
+          <p className="mt-4 text-lg text-gray-600">
+            A collection of web and mobile applications I&apos;ve built to solve
             real-world problems.
           </p>
         </div>
@@ -58,7 +58,7 @@ const Projects = () => {
               } items-center gap-6 md:px-8 transition-transform`}
             >
               {/* Project Image */}
-              <div className="lg:w-1/2 mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-2xl relative group">
+              <div className="lg:w-1/2 mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-2xl relative group border border-gray-200">
                 <a href={project.url} target="_blank" rel="noopener noreferrer">
                   <img
                     src={project.image}
@@ -66,16 +66,16 @@ const Projects = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-white opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
                 </a>
               </div>
 
               {/* Project Details */}
               <div className="lg:w-1/2">
-                <h3 className="text-3xl font-semibold text-white mb-4 hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-3xl font-semibold text-black mb-4 hover:text-gray-700 transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-lg text-gray-400 mb-6">
+                <p className="text-lg text-gray-700 mb-6">
                   {project.description}
                 </p>
 
@@ -84,7 +84,7 @@ const Projects = () => {
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="bg-blue-500 text-white py-1 px-4 rounded-full text-sm shadow-md transition-colors duration-300 hover:bg-blue-400"
+                      className="bg-black text-white py-1 px-4 rounded-full text-sm shadow-md transition-colors duration-300 hover:bg-gray-800"
                     >
                       {tech}
                     </span>
