@@ -1,9 +1,9 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
-import Skills from "./components/Skills";
-import Services from "./components/Services";
-import Projects from "./components/Projects";
+import Education from "./components/Skills";
+import Research from "./components/Services";
+import Publications from "./components/Projects";
 import ContactForm from "./components/ContactForm";
 import Experience from "./components/Experience";
 
@@ -12,10 +12,10 @@ const App = () => {
     <>
       <Navbar />
       <Hero />
-      <Skills />
+      <Education />
       <Experience />
-      <Services />
-      <Projects />
+      <Research />
+      <Publications />
       <ContactForm />
       <Footer />
     </>

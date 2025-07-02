@@ -1,68 +1,72 @@
 import {
-  FaRocket,
-  FaCode,
-  FaRegLightbulb,
-  FaGraduationCap,
+  FaChalkboardTeacher,
+  FaFlask,
+  FaUserGraduate,
+  FaBookOpen,
 } from "react-icons/fa";
 
 const experiences = [
   {
-    icon: <FaRocket size={32} />,
-    title: "Mid-Level Laravel Developer",
-    company: "Robust Agency",
-    duration: "Oct 2023 to Present",
+    icon: <FaChalkboardTeacher size={32} />,
+    title: "Chemistry Teacher",
+    company: "AL-HAFIZ School System & Academy",
+    duration: "2023 to 2025",
+    location: "Lahore, Pakistan",
     description:
-      "Driving backend development, DevOps automation, and API integrations for large-scale applications.",
+      "Currently teaching chemistry at secondary and higher secondary levels, developing curriculum and conducting laboratory experiments.",
     tasks: [
-      "Integrated OpenAI, Shopify, Amazon and Meta api's.",
-      "Developed and optimized monolith architecture.",
-      "Implemented CI/CD pipelines and automated deployments.",
-      "Managed server infrastructure and cloud-based hosting.",
+      "Teaching chemistry concepts to high school students",
+      "Designing and conducting laboratory experiments",
+      "Preparing students for board examinations",
+      "Developing engaging teaching materials and methods",
     ],
     gradient: "from-gray-800 to-gray-600",
   },
   {
-    icon: <FaCode size={32} />,
-    title: "Laravel Developer",
-    company: "Consecutive Bytes",
-    duration: "Apr 2023 to Sep 2023",
+    icon: <FaUserGraduate size={32} />,
+    title: "Chemistry Lecturer",
+    company: "National Science College for Girls",
+    duration: "Nov 2021 to Sep 2022",
+    location: "Gujranwala, Pakistan",
     description:
-      "Worked as a full-stack developer, implementing APIs and interactive front-end components.",
+      "Delivered comprehensive chemistry lectures at college level, mentored students, and contributed to academic excellence.",
     tasks: [
-      "Integrated Sportmonks and Football API for live data.",
-      "Developed dynamic front-end dashboards using blade.",
-      "Built and maintained RESTful APIs with Laravel.",
-      "Ensured cross-platform compatibility and performance.",
+      "Conducted lectures on advanced chemistry topics",
+      "Supervised student research projects",
+      "Mentored students for higher education pursuits",
+      "Participated in curriculum development activities",
     ],
     gradient: "from-gray-700 to-gray-500",
   },
   {
-    icon: <FaRegLightbulb size={32} />,
-    title: "Junior Software Developer",
-    company: "Royal Soft",
-    duration: "Mar 2022 to Apr 2023",
+    icon: <FaFlask size={32} />,
+    title: "Science Subjects Teacher",
+    company: "Brookfield Ideal Science School",
+    duration: "2016 to 2018",
+    location: "Gujranwala, Pakistan",
     description:
-      "Worked as a full-stack developer, implementing and optimizing accounting software solutions.",
+      "Started teaching career focusing on multiple science subjects, building foundational teaching skills and student engagement techniques.",
     tasks: [
-      "Developed accounting software modules with Laravel.",
-      "Built UI components with Html, Css and Bootstrap for financial dashboards.",
-      "Integrated accounting APIs for automation.",
-      "Optimized database queries to improve processing speed.",
+      "Taught chemistry, physics, and biology to secondary students",
+      "Managed science laboratory activities and safety protocols",
+      "Developed interactive teaching methods for complex concepts",
+      "Organized science fairs and student competitions",
     ],
     gradient: "from-gray-600 to-gray-400",
   },
   {
-    icon: <FaGraduationCap size={32} />,
-    title: "Intern Developer",
-    company: "6Flicks Technologies",
-    duration: "Aug 2019 to Feb 2022",
+    icon: <FaBookOpen size={32} />,
+    title: "Research & Academic Pursuits",
+    company: "Ongoing Academic Development",
+    duration: "2016 to Present",
+    location: "Pakistan",
     description:
-      "Learned full-stack development basics and contributed to real-world applications.",
+      "Continuous involvement in research activities, publications, and academic conferences while pursuing advanced degrees in chemistry.",
     tasks: [
-      "Learned fundamentals of frontend and backend development.",
-      "Gained experience with WordPress development.",
-      "Built small-scale CRUD applications for internal use.",
-      "Developed accounting and school management software.",
+      "Conducting research on curcumin and metal-organic frameworks",
+      "Publishing research papers in international journals",
+      "Participating in academic conferences (TRIC 2023 & 2024)",
+      "Pursuing PhD in Chemistry with focus on innovative research",
     ],
     gradient: "from-black to-gray-800",
   },
@@ -75,11 +79,13 @@ const Experience = () => {
       className="bg-white py-12 text-black px-6 md:px-10"
     >
       <div className="max-w-7xl mx-auto w-full">
-        {/* Left Section - Heading */}
+        {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-black">Experience</h2>
+          <h2 className="text-4xl font-extrabold text-black">
+            Teaching & Research Experience
+          </h2>
           <p className="mt-2 text-lg text-gray-600">
-            Take a look at the milestones in my professional journey.
+            Professional journey in chemistry education and academic research.
           </p>
         </div>
 
@@ -100,8 +106,10 @@ const Experience = () => {
                   {experience.title}
                 </h3>
                 <p className="mt-2 text-sm text-gray-700">
-                  {experience.company} - {experience.duration}
+                  {experience.company}
                 </p>
+                <p className="text-sm text-gray-600">{experience.duration}</p>
+                <p className="text-sm text-gray-600">{experience.location}</p>
               </div>
 
               <div className="w-full lg:w-2/3">
