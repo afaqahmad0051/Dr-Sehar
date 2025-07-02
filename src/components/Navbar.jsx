@@ -6,6 +6,16 @@ const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("Home");
 
+  const handleResumeDownload = (e) => {
+    e.preventDefault();
+    const link = document.createElement("a");
+    link.href = "/sehar-cv.pdf";
+    link.download = "Sehar_Basheer_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const windowHeight = window.innerHeight;
@@ -68,8 +78,12 @@ const Navbar = () => {
         </nav>
       </header>
 
-      {/* Brand/Logo - Plain text without border */}
-      <div className="fixed top-4 left-4 z-40">
+      {/* Brand/Logo - Show on hero section for mobile, always show on desktop */}
+      <div
+        className={`fixed top-4 left-4 z-40 transition-opacity duration-300 ${
+          activeSection === "home" ? "block" : "hidden"
+        } lg:block`}
+      >
         <a
           href="#home"
           className="text-xl font-bold text-black hover:text-gray-700 transition-colors duration-300"
@@ -91,14 +105,13 @@ const Navbar = () => {
       </div>
 
       {/* Resume Button - Positioned in Right Corner (Desktop Only) */}
-      <div className="fixed top-4 right-4 z-40 hidden lg:block">
-        <a
-          href="/sehar-basheer-cv.pdf"
-          download="sehar-basheer-cv.pdf"
-          className="flex items-center gap-2 px-4 py-2 bg-black text-white text-sm font-medium rounded-full shadow-md hover:bg-gray-800 transition-all duration-300"
+      <div className="fixed top-4 right-4 z-50 hidden lg:block">
+        <button
+          onClick={handleResumeDownload}
+          className="flex items-center gap-2 px-4 py-2 bg-black text-white text-sm font-medium rounded-full shadow-md hover:bg-gray-800 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-500"
         >
           Resume <FaDownload className="text-xs" />
-        </a>
+        </button>
       </div>
 
       {/* Mobile menu */}
@@ -152,14 +165,15 @@ const Navbar = () => {
                 </a>
               ))}
               <div className="pt-4">
-                <a
-                  href="/sehar-basheer-cv.pdf"
-                  download="sehar-basheer-cv.pdf"
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-black text-white text-sm font-medium rounded-lg shadow-md hover:bg-gray-800 transition-all duration-300"
-                  onClick={() => setMobileMenuOpen(false)}
+                <button
+                  onClick={(e) => {
+                    handleResumeDownload(e);
+                    setMobileMenuOpen(false);
+                  }}
+                  className="flex items-center justify-center gap-2 px-6 py-3 bg-black text-white text-sm font-medium rounded-lg shadow-md hover:bg-gray-800 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-500 w-full"
                 >
                   Resume <FaDownload />
-                </a>
+                </button>
               </div>
             </div>
           </>
