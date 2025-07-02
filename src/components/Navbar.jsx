@@ -25,10 +25,10 @@ const Navbar = () => {
       // Determine the active section based on scroll position
       const sections = [
         "home",
-        "skills",
+        "education",
         "experience",
-        "services",
-        "projects",
+        "research",
+        "publications",
         "contact",
       ];
 
@@ -59,7 +59,7 @@ const Navbar = () => {
       >
         <div className="flex lg:flex-1">
           <a href="#" className="text-2xl font-bold text-black">
-            AFAQ DEV
+            SEHAR BASHEER
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -75,10 +75,10 @@ const Navbar = () => {
         <div className="hidden lg:flex lg:gap-10">
           {[
             "Home",
-            "Skills",
+            "Education",
             "Experience",
-            "Services",
-            "Projects",
+            "Research",
+            "Publications",
             "Contact",
           ].map((link) => (
             <a
@@ -96,8 +96,8 @@ const Navbar = () => {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="/afaq-cv.pdf"
-            download="afaq-cv.pdf"
+            href="/sehar-basheer-cv.pdf"
+            download="sehar-basheer-cv.pdf"
             className="flex items-center gap-2 px-6 py-2 bg-black text-white text-sm font-medium rounded-lg shadow-md hover:bg-gray-800 transition-all duration-300"
           >
             Resume <FaDownload />
@@ -115,7 +115,7 @@ const Navbar = () => {
           <>
             <div className="flex items-center justify-between">
               <a href="#" className="sr-only">
-                AFAQ DEV
+                SEHAR BASHEER
               </a>
               <button
                 type="button"
@@ -142,10 +142,10 @@ const Navbar = () => {
             <div className="mt-8">
               {[
                 "Home",
-                "Skills",
+                "Education",
                 "Experience",
-                "Services",
-                "Projects",
+                "Research",
+                "Publications",
                 "Contact",
               ].map((link) => (
                 <a
@@ -158,8 +158,8 @@ const Navbar = () => {
               ))}
               <div className="w-1/2 mt-3">
                 <a
-                  href="/afaq-cv"
-                  download="afaq-cv.pdf"
+                  href="/sehar-basheer-cv.pdf"
+                  download="sehar-basheer-cv.pdf"
                   className="flex items-center justify-center gap-2 px-6 py-3 bg-black text-white text-sm font-medium rounded-lg shadow-md hover:bg-gray-800 transition-all duration-300"
                 >
                   Resume <FaDownload />

@@ -1,94 +1,163 @@
-// Sample project data
-const projects = [
+// Research Publications data
+const publications = [
   {
-    title: "Social442",
+    title:
+      "Structural Development of Curcumin: A Natural Product Arsenal for Diverse Therapeutic Targets",
     description:
-      "A leading football social network offering live scores, fixtures, fan communities, and fantasy football. Contributed to feature development, performance optimization, and enhancing user engagement.",
-    image: "/images/social442.png",
-    technologies: ["Laravel", "Php", "jQuery"],
-    url: "https://www.social442.com",
+      "Comprehensive research on curcumin derivatives and their therapeutic potential. This study explores the structural modifications of curcumin and their enhanced bioavailability and stability for various therapeutic applications.",
+    image: "/images/curcumin-research.jpg",
+    journal: "Journal of Molecular Structure",
+    authors: ["Sehar Basheer", "Dr. Mahmood Ahmad"],
+    year: "2025",
+    volume: "Volume 1324",
+    url: "#",
   },
   {
-    title: "Cosmo City",
+    title: "Sulfonamides as a Promising Scaffold in Drug Discovery",
     description:
-      "An e-commerce platform offering a wide range of beauty products, including skincare, makeup, and personal care. Focused on seamless user experience, secure transactions, and personalized recommendations to enhance customer satisfaction.",
-    image: "/images/cosmo-city.png",
-    technologies: ["Php", "jQuery", "Bootstrap"],
-    url: "https://cosmocity.pk",
+      "An insightful review on FDA-approved sulfonamide molecules covering synthesis strategies, medical applications, and binding mechanisms. The research highlights the role of sulfonamides in modern pharmaceutical development.",
+    image: "/images/sulfonamides-research.jpg",
+    journal: "Chemistry and Biodiversity",
+    authors: ["Sehar Basheer", "Dr. Mahmood Ahmad"],
+    year: "2025",
+    volume: "In Press",
+    url: "#",
   },
   {
-    title: "Hangout UAE",
+    title: "Development of Biodegradable Film Based on Guar Gum-Gelatin",
     description:
-      "A platform offering customized tours and adventures in Dubai and the UAE, including desert safaris, theme park tickets, and guided city tours. I contributed to optimizing user experience and streamlining booking processes for a range of travel activities.",
-    image: "/images/hangout.png",
-    technologies: ["Php", "jQuery", "Bootstrap"],
-    url: "https://hangoutuae.com",
+      "Research focused on developing sustainable and biodegradable film materials using guar gum, gelatin, and sodium alginate. This work addresses environmental concerns through innovative biomaterial solutions.",
+    image: "/images/biodegradable-film.jpg",
+    journal: "Royal Society of Chemistry",
+    authors: ["Sehar Basheer", "Dr. Mahmood Ahmad"],
+    year: "2025",
+    volume: "DOI: 10.1039/D4RA03985H",
+    url: "#",
   },
   {
-    title: "Silent Stream",
+    title: "Metal-Organic Frameworks for Curcumin Delivery",
     description:
-      "A cloud file storage service for seamless access, sharing, and synchronization across devices. Offers secure storage with encryption and collaboration tools. Ideal for both personal and business file management.",
-    image: "/images/silent-stream.jpg",
-    technologies: ["Php", "Laravel", "REST API"],
-    url: "http://silentstream.io",
+      "Exploring MOFs as versatile platforms for curcumin delivery systems. This research addresses bioavailability challenges through advanced nanotechnology and drug delivery mechanisms.",
+    image: "/images/mof-research.jpg",
+    journal: "Coordination Chemistry Reviews",
+    authors: ["Sehar Basheer", "Dr. Mahmood Ahmad"],
+    year: "2025",
+    volume: "Submitted",
+    url: "#",
   },
 ];
 
-const Projects = () => {
+const Publications = () => {
   return (
     <section
-      id="projects"
+      id="publications"
       className="py-16 bg-gradient-to-r from-white via-gray-50 to-gray-100 text-black"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-black">My Projects</h2>
+          <h2 className="text-4xl font-extrabold text-black">
+            Research Publications
+          </h2>
           <p className="mt-4 text-lg text-gray-600">
-            A collection of web and mobile applications I&apos;ve built to solve
-            real-world problems.
+            Published research papers and contributions to the field of
+            chemistry.
           </p>
         </div>
 
         <div className="space-y-16">
-          {projects.map((project, index) => (
+          {publications.map((publication, index) => (
             <div
               key={index}
               className={`flex flex-col ${
                 index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
               } items-center gap-6 md:px-8 transition-transform`}
             >
-              {/* Project Image */}
+              {/* Publication Image */}
               <div className="lg:w-1/2 mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-2xl relative group border border-gray-200">
-                <a href={project.url} target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-white opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                </a>
+                <div className="w-full h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <div className="text-6xl text-gray-400 mb-4">📄</div>
+                    <p className="text-gray-600 font-medium">
+                      Research Publication
+                    </p>
+                    <p className="text-sm text-gray-500 mt-2">
+                      {publication.year}
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              {/* Project Details */}
+              {/* Publication Details */}
               <div className="lg:w-1/2">
                 <h3 className="text-3xl font-semibold text-black mb-4 hover:text-gray-700 transition-colors duration-300">
-                  {project.title}
+                  {publication.title}
                 </h3>
-                <p className="text-lg text-gray-700 mb-6">
-                  {project.description}
+                <p className="text-lg text-gray-700 mb-4">
+                  {publication.description}
                 </p>
 
-                {/* Technologies Used */}
+                {/* Publication Info */}
+                <div className="space-y-2 mb-6">
+                  <p className="text-sm text-gray-600">
+                    <span className="font-semibold">Journal:</span>{" "}
+                    {publication.journal}
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    <span className="font-semibold">Authors:</span>{" "}
+                    {publication.authors.join(", ")}
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    <span className="font-semibold">Year:</span>{" "}
+                    {publication.year}
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    <span className="font-semibold">Volume/DOI:</span>{" "}
+                    {publication.volume}
+                  </p>
+                </div>
+
+                {/* Research Areas */}
                 <div className="flex flex-wrap gap-3">
-                  {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="bg-black text-white py-1 px-4 rounded-full text-sm shadow-md transition-colors duration-300 hover:bg-gray-800"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  {index === 0 && (
+                    <>
+                      <span className="bg-black text-white py-1 px-4 rounded-full text-sm shadow-md transition-colors duration-300 hover:bg-gray-800">
+                        Curcumin
+                      </span>
+                      <span className="bg-black text-white py-1 px-4 rounded-full text-sm shadow-md transition-colors duration-300 hover:bg-gray-800">
+                        Drug Discovery
+                      </span>
+                    </>
+                  )}
+                  {index === 1 && (
+                    <>
+                      <span className="bg-black text-white py-1 px-4 rounded-full text-sm shadow-md transition-colors duration-300 hover:bg-gray-800">
+                        Sulfonamides
+                      </span>
+                      <span className="bg-black text-white py-1 px-4 rounded-full text-sm shadow-md transition-colors duration-300 hover:bg-gray-800">
+                        Pharmaceutical
+                      </span>
+                    </>
+                  )}
+                  {index === 2 && (
+                    <>
+                      <span className="bg-black text-white py-1 px-4 rounded-full text-sm shadow-md transition-colors duration-300 hover:bg-gray-800">
+                        Biomaterials
+                      </span>
+                      <span className="bg-black text-white py-1 px-4 rounded-full text-sm shadow-md transition-colors duration-300 hover:bg-gray-800">
+                        Sustainability
+                      </span>
+                    </>
+                  )}
+                  {index === 3 && (
+                    <>
+                      <span className="bg-black text-white py-1 px-4 rounded-full text-sm shadow-md transition-colors duration-300 hover:bg-gray-800">
+                        MOFs
+                      </span>
+                      <span className="bg-black text-white py-1 px-4 rounded-full text-sm shadow-md transition-colors duration-300 hover:bg-gray-800">
+                        Drug Delivery
+                      </span>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
@@ -99,4 +168,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Publications;

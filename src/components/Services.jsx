@@ -1,110 +1,112 @@
 import {
+  FaFlask,
+  FaMicroscope,
+  FaAtom,
+  FaLeaf,
+  FaChalkboardTeacher,
+  FaBookOpen,
+  FaSearch,
   FaLaptopCode,
-  FaRobot,
-  FaDatabase,
-  FaCloud,
-  FaShopify,
-  FaServer,
-  FaLinux,
-  FaCogs,
-  FaTachometerAlt,
+  FaGraduationCap,
 } from "react-icons/fa";
 
-const Services = () => {
-  const servicesPart1 = [
+const Research = () => {
+  const researchAreas = [
     {
-      name: "Web Development",
+      name: "Curcumin Research",
       description:
-        "Creating responsive, dynamic, and SEO-friendly websites tailored to your needs.",
-      icon: <FaLaptopCode className="text-gray-700" />,
+        "Investigating curcumin derivatives and their therapeutic potential for diverse applications in drug discovery.",
+      icon: <FaLeaf className="text-gray-700" />,
     },
     {
-      name: "AI Integration",
+      name: "Metal-Organic Frameworks",
       description:
-        "Implementing AI-powered solutions such as chatbots, automation, and recommendation systems.",
-      icon: <FaRobot className="text-gray-800" />,
+        "Exploring MOFs as versatile platforms for curcumin delivery and overcoming bioavailability challenges.",
+      icon: <FaAtom className="text-gray-800" />,
     },
     {
-      name: "Database Management",
+      name: "Biodegradable Materials",
       description:
-        "Ensuring efficient storage and retrieval of your data with secure database solutions.",
-      icon: <FaDatabase className="text-gray-600" />,
+        "Development of sustainable and biodegradable film materials for environmental applications.",
+      icon: <FaLeaf className="text-gray-600" />,
     },
     {
-      name: "Cloud Integration",
+      name: "Drug Discovery",
       description:
-        "Deploying cloud-based solutions for scalability, reliability, and performance.",
-      icon: <FaCloud className="text-gray-700" />,
+        "Research into sulfonamides and other molecules for pharmaceutical applications and medical treatments.",
+      icon: <FaMicroscope className="text-gray-700" />,
     },
   ];
 
-  const servicesPart2 = [
+  const academicServices = [
     {
-      name: "Shopify Development",
+      name: "Chemistry Education",
       description:
-        "Building customized Shopify stores with seamless payment integrations and scalable features.",
-      icon: <FaShopify className="text-gray-800" />,
+        "Providing high-quality chemistry education at secondary and higher secondary levels with innovative teaching methods.",
+      icon: <FaChalkboardTeacher className="text-gray-800" />,
     },
     {
-      name: "DevOps & Automation",
+      name: "Research Supervision",
       description:
-        "Streamlining deployment, monitoring, and CI/CD pipelines for optimized workflows.",
-      icon: <FaServer className="text-gray-700" />,
+        "Guiding and mentoring students in chemistry research projects and thesis work.",
+      icon: <FaGraduationCap className="text-gray-700" />,
     },
     {
-      name: "Linux & Ubuntu Management",
+      name: "Laboratory Training",
       description:
-        "Setting up and maintaining secure, high-performance Ubuntu-based server environments.",
-      icon: <FaLinux className="text-gray-600" />,
+        "Conducting practical laboratory sessions and training in modern analytical chemistry techniques.",
+      icon: <FaFlask className="text-gray-600" />,
     },
     {
-      name: "AI & OpenAI Integration",
+      name: "Academic Writing",
       description:
-        "Integrating AI-powered solutions using OpenAI for automation, chatbots, and data analysis.",
-      icon: <FaRobot className="text-gray-800" />,
+        "Assistance with research paper writing, publication preparation, and academic documentation.",
+      icon: <FaBookOpen className="text-gray-800" />,
     },
     {
-      name: "Laravel API & Backend Development",
+      name: "Conference Presentations",
       description:
-        "Creating RESTful APIs, optimizing databases, and ensuring backend scalability using Laravel.",
-      icon: <FaCogs className="text-gray-700" />,
+        "Presenting research findings at international conferences and academic forums.",
+      icon: <FaSearch className="text-gray-700" />,
     },
     {
-      name: "Backend Performance & Caching",
+      name: "Curriculum Development",
       description:
-        "Improving system performance using caching techniques, load balancing, and query optimization.",
-      icon: <FaTachometerAlt className="text-gray-600" />,
+        "Developing engaging chemistry curricula and educational materials for effective learning.",
+      icon: <FaLaptopCode className="text-gray-600" />,
     },
   ];
 
   return (
     <>
-      {/* Section 1 */}
+      {/* Research Areas Section */}
       <section
-        id="services"
+        id="research"
         className="bg-gradient-to-br from-gray-50 via-white to-gray-100 py-16 text-black"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-extrabold text-black">My Services</h2>
+            <h2 className="text-4xl font-extrabold text-black">
+              Research Areas
+            </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Transforming ideas into impactful digital solutions.
+              Current research focus and areas of expertise in chemistry.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {servicesPart1.map((service) => (
+            {researchAreas.map((research) => (
               <div
-                key={service.name}
+                key={research.name}
                 className="group p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:border-black hover:shadow-lg transform transition-transform hover:scale-105"
               >
                 <div className="text-5xl mb-4 group-hover:text-black">
-                  {service.icon}
+                  {research.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 group-hover:text-black">
-                  {service.name}
+                  {research.name}
                 </h3>
                 <p className="mt-2 text-gray-600 group-hover:text-gray-800">
-                  {service.description}
+                  {research.description}
                 </p>
               </div>
             ))}
@@ -112,22 +114,23 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Section 2 */}
+      {/* Academic Services Section */}
       <section
-        id="services-part2"
+        id="academic-services"
         className="bg-gradient-to-bl from-gray-100 via-gray-50 to-white py-16 text-black"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold text-black">
-              More Expertise
+              Academic Services
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Delivering a diverse range of services to meet your unique needs.
+              Educational services and expertise offered in chemistry and
+              research.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {servicesPart2.map((service) => (
+            {academicServices.map((service) => (
               <div
                 key={service.name}
                 className="group p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:border-black hover:shadow-lg transform transition-transform hover:scale-105"
@@ -150,4 +153,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Research;
